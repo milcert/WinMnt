@@ -20,7 +20,7 @@ This project is based on the following open-source libraries:
 
 # Usage example
 
-- Run the binary with the desired parameters (by default it listens on localhost:5000)
+- Run the binary with the desired parameters (by default it listens on `localhost:5000`)
 - Mount a disk via the REST API, for example with Powershell
 
 ```powershell
