@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
+    <PublishAot>true</PublishAot>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="deps\**" />
+    <EmbeddedResource Remove="deps\**" />
+    <None Remove="deps\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="LTRData.DiscUtils" Version="1.0.48" />
+    <PackageReference Include="LTRData.DiscUtils.Containers" Version="1.0.48" />
+    <PackageReference Include="LTRData.DiscUtils.Dokan" Version="2.0.6.18" />
+    <PackageReference Include="LTRData.DiscUtils.FileSystems" Version="1.0.48" />
+    <PackageReference Include="LTRData.DiscUtils.Transports" Version="1.0.48" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Owin" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
